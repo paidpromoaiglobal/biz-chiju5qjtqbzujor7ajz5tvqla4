@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#6A0DAD">
+<title>Earrings Collection | Anumirra Group Fancy &amp; Stationery</title>
+<meta name="description" content="Browse our beautiful earrings collection at Anumirra Group Fancy and Stationery, Mambakkam, Polachery, Tamil Nadu.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:#0f172a;background:#fff;-webkit-font-smoothing:antialiased}
+.wa-fab{position:fixed;bottom:24px;right:24px;z-index:9999;background:#25d366;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,.5);text-decoration:none;transition:transform .2s,box-shadow .2s}.wa-fab:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.6)}
+.nav-s{box-shadow:0 2px 24px rgba(0,0,0,.12)!important;}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,.06);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:62px;transition:box-shadow .3s}
+.nav-brand{font-weight:700;font-size:.97rem;color:#6A0DAD;max-width:55%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-back{color:#64748b;text-decoration:none;font-size:.83rem;font-weight:500;display:flex;align-items:center;gap:5px}
+.nav-back:hover{color:#6A0DAD}
+.nav-cta{background:#6A0DAD;color:#fff;padding:9px 22px;border-radius:8px;text-decoration:none;font-size:.82rem;font-weight:600;transition:opacity .2s}
+.nav-cta:hover{opacity:.88}
+
+.page-header{padding:100px 5vw 48px;text-align:center;background:linear-gradient(135deg,#f5f0ff 0%,#fff 60%,#fff5fb 100%)}
+.ph-chip{display:inline-flex;align-items:center;gap:7px;background:#f0e8ff;border:1px solid #d4b8ff;color:#6A0DAD;padding:6px 16px;border-radius:50px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.page-header h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:#0f172a;margin-bottom:10px;letter-spacing:-.03em}
+.page-header h1 span{color:#6A0DAD}
+.page-header p{color:#64748b;font-size:.94rem;max-width:500px;margin:0 auto}
+
+.gallery-section{padding:20px 4vw 60px}
+.masonry{columns:2;column-gap:10px}
+@media(min-width:580px){.masonry{columns:3}}
+@media(min-width:900px){.masonry{columns:4}}
+.g-item{break-inside:avoid;margin-bottom:10px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.08);transition:box-shadow .25s}
+.g-item:hover{box-shadow:0 8px 28px rgba(106,13,173,.2)}
+.g-item img{width:100%;display:block;transition:transform .35s ease}
+.g-item:hover img{transform:scale(1.04)}
+.g-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(106,13,173,.55) 0%,transparent 50%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:14px}
+.g-item:hover .g-overlay{opacity:1}
+.g-label{color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.04em}
+
+/* Lightbox */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(10,5,20,.93);z-index:9999;align-items:center;justify-content:center;padding:20px}
+.lightbox.active{display:flex}
+.lb-img-wrap{position:relative;max-width:90vw;max-height:90vh}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:12px;object-fit:contain;display:block}
+.lb-counter{position:fixed;top:18px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:.8rem;font-weight:500;background:rgba(0,0,0,.4);padding:4px 14px;border-radius:20px}
+.lb-close{position:fixed;top:14px;right:18px;color:#fff;font-size:2rem;cursor:pointer;background:none;border:none;padding:8px;line-height:1;opacity:.75;transition:opacity .2s}
+.lb-close:hover{opacity:1}
+.lb-prev,.lb-next{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:1.8rem;padding:12px 18px;cursor:pointer;border-radius:10px;transition:background .2s;line-height:1}
+.lb-prev:hover,.lb-next:hover{background:rgba(255,255,255,.22)}
+.lb-prev{left:12px}.lb-next{right:12px}
+
+.cta-band{background:linear-gradient(135deg,#6A0DAD 0%,#9B30FF 100%);padding:56px 5vw;text-align:center;color:#fff}
+.cta-band h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin-bottom:10px;letter-spacing:-.02em}
+.cta-band p{opacity:.8;max-width:420px;margin:0 auto 26px;font-size:.92rem;line-height:1.65}
+.btn-wa{display:inline-flex;align-items:center;gap:9px;background:#fff;color:#6A0DAD;padding:13px 32px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.9rem;box-shadow:0 4px 16px rgba(0,0,0,.2);transition:transform .15s}
+.btn-wa:hover{transform:translateY(-2px)}
+
+footer{background:#020617;color:#334155;padding:24px 5vw;text-align:center;font-size:.8rem}
+.footer-brand{color:#64748b;font-weight:700;font-size:.88rem;margin-bottom:6px}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-brand">Anumirra Group Fancy &amp; Stationery</a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-back">← Back to Home</a>
+    <a href="https://wa.me/91?text=Hi!%20I%20saw%20your%20earrings%20collection%20online%20and%20I%27m%20interested%20in%20purchasing.%20Can%20you%20share%20the%20price%20and%20availability%3F" class="nav-cta">💬 Order Now</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="ph-chip">💎 &nbsp; New Collection</div>
+  <h1>Our <span>Earrings</span> Collection</h1>
+  <p>Explore our stunning range of earrings — from classic studs to statement drops, all available at our store in Mambakkam, Polachery.</p>
+</div>
+
+<div class="gallery-section">
+  <div class="masonry" id="gallery">
+    <div class="g-item" onclick="openLb(0)"><img src="images/earring-1.jpg" alt="Earrings" loading="lazy"><div class="g-overlay"><span class="g-label">View</span></div></div>
+    <div class="g-item" onclick="openLb(1)"><img src="images/earring-2.jpg" alt="Earrings" loading="lazy"><div class="g-overlay"><span class="g-label">View</span></div></div>
+    <div class="g-item" onclick="openLb(2)"><img src="images/earring-3.jpg" alt="Earrings" loading="lazy"><div class="g-overlay"><span class="g-label">View</span></div></div>
+    <div class="g-item" onclick="openLb(3)"><img src="images/earring-4.jpg" alt="Earrings" loading="lazy"><div class="g-overlay"><span class="g-label">View</span></div></div>
+    <div class="g-item" onclick="openLb(4)"><img src="images/earring-5.jpg" alt="Earrings" loading="lazy"><div class="g-overlay"><span class="g-label">View</span></div></div>
+    <div class="g-item" onclick="openLb(5)"><img src="images/earring-6.jpg" alt="Earrings" loading="lazy"><div class="g-overlay"><span class="g-label">View</span></div></div>
+    <div class="g-item" onclick="openLb(6)"><img src="images/earring-7.jpg" alt="Earrings" loading="lazy"><div class="g-overlay"><span class="g-label">View</span></div></div>
+    <div class="g-item" onclick="openLb(7)"><img src="images/earring-8.jpg" alt="Earrings" loading="lazy"><div class="g-overlay"><span class="g-label">View</span></div></div>
+    <div class="g-item" onclick="openLb(8)"><img src="images/earring-9.jpg" alt="Earrings" loading="lazy"><div class="g-overlay"><span class="g-label">View</span></div></div>
+    <div class="g-item" onclick="openLb(9)"><img src="images/earring-10.jpg" alt="Earrings" loading="lazy"><div class="g-overlay"><span class="g-label">View</span></div></div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lb" onclick="closeLbOutside(event)">
+  <span class="lb-counter" id="lb-counter">1 / 10</span>
+  <button class="lb-close" onclick="closeLb()">&#x2715;</button>
+  <button class="lb-prev" onclick="shiftLb(-1)">&#8249;</button>
+  <img id="lb-img" src="" alt="Earring">
+  <button class="lb-next" onclick="shiftLb(1)">&#8250;</button>
+</div>
+
+<div class="cta-band">
+  <h2>Like What You See?</h2>
+  <p>WhatsApp us to ask about price, availability, or to place an order. We respond fast!</p>
+  <a href="https://wa.me/91?text=Hi!%20I%20saw%20your%20earrings%20collection%20online%20and%20I%27m%20interested%20in%20purchasing.%20Can%20you%20share%20the%20price%20and%20availability%3F" class="btn-wa">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp to Order
+  </a>
+</div>
+
+<footer>
+  <div class="footer-brand">Anumirra group fancy and stationary</div>
+  <div>Mambakkam, Polachery, Tamil Nadu 600127</div>
+</footer>
+
+<a href="https://wa.me/91?text=Hi!%20I%20saw%20your%20earrings%20collection%20online%20and%20I%27m%20interested%20in%20purchasing.%20Can%20you%20share%20the%20price%20and%20availability%3F" class="wa-fab" aria-label="WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const imgs = Array.from(document.querySelectorAll('.g-item img')).map(i=>i.src);
+let cur = 0;
+function openLb(i){cur=i;document.getElementById('lb-img').src=imgs[i];document.getElementById('lb-counter').textContent=(i+1)+' / '+imgs.length;document.getElementById('lb').classList.add('active');document.body.style.overflow='hidden'}
+function closeLb(){document.getElementById('lb').classList.remove('active');document.body.style.overflow=''}
+function closeLbOutside(e){if(e.target===document.getElementById('lb'))closeLb()}
+function shiftLb(d){cur=(cur+d+imgs.length)%imgs.length;document.getElementById('lb-img').src=imgs[cur];document.getElementById('lb-counter').textContent=(cur+1)+' / '+imgs.length}
+document.addEventListener('keydown',e=>{if(!document.getElementById('lb').classList.contains('active'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')shiftLb(-1);if(e.key==='ArrowRight')shiftLb(1)});
+(function(){var nav=document.getElementById('nav');if(!nav)return;window.addEventListener('scroll',function(){nav.classList.toggle('nav-s',window.scrollY>50);},{passive:true});})();
+</script>
+</body>
+</html>
